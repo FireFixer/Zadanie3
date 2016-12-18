@@ -1,19 +1,12 @@
-#include <QtGlobal>
-#if QT_VERSION < 0x050000
-#include <QtGui>
-#else
-#include <QtWidgets>
-#endif
+#include "mainwindow.h"
 
-using namespace std;
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc,argv);
+    QApplication app(argc, argv);
 
-    QWidget *widget = new QWidget;
-
-    widget->show();
-
+    MainWindow mainWindow;
+    mainWindow.showMaximized();
     return app.exec();
 }
